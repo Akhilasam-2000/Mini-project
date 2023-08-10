@@ -1,0 +1,48 @@
+
+{{ style.css | asset_url | stylesheet_tag }}
+<div class="wholediv">
+<p>{{section.settings.text}}</p>
+{% for block in section.blocks %}
+
+  <img src="{{ block.settings.image | img_url: 'master' }}" />;
+   
+{% endfor %}
+</div>
+{% schema %}
+{
+  "name": "product Recommendations",
+  "settings": [
+    {
+      "type": "text",
+      "label": " Your Text",
+      "id": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Add the images",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "image",
+      "name": "Product Recommendations"
+    },
+    {
+        "category":"text",
+        "name":"product Recommendations"
+    }
+  ]
+}
+{% endschema %}
+
+
+

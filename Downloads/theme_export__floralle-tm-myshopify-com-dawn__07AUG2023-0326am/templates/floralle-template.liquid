@@ -1,0 +1,35 @@
+<div class="image-grid">
+    {% assign image_data = [
+      {
+        src: 'https://floralle.com/cdn/shop/files/Ecstatic.jpg?v=1653886658&width=750',
+        alt: 'Image 1'
+      },
+      {
+        src: 'https://floralle.com/cdn/shop/files/Euphoria.jpg?v=1653886727&width=750',
+        alt: 'Image 2'
+      },
+      {
+        src: 'https://floralle.com/cdn/shop/files/Utopian.jpg?v=1653887213&width=750',
+        alt: 'Image 3'
+      },
+      {
+        src: 'https://floralle.com/cdn/shop/files/Romantic.jpg?v=1653886969&width=750',
+        alt: 'Image 4'
+      },
+      {
+        src: 'https://floralle.com/cdn/shop/files/Lush.jpg?v=1653886796&width=750',
+        alt: 'Image 5'
+      },
+      {
+        src: 'https://floralle.com/cdn/shop/files/emo4.jpg?v=1653887377&width=750',
+        alt: 'Image 6'
+      }
+    ] %}
+  
+    {% for image in image_data %}
+      <div class="image-item">
+        <img src="{{ image.src }}" alt="{{ image.alt }}" />
+      </div>
+    {% endfor %}
+  </div>
+  
